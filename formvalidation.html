@@ -1,6 +1,8 @@
 <html>
 <body>
-  
+  <head>
+    <link rel="stylesheet" href="style.css"
+  </head>
     
 
 <div class="container">
@@ -9,7 +11,8 @@
   <h2>Sign up</h2>
 
 <label>USERNAME</label><br><br>
-<input type="text" id="user" placeholder="Username" required /><br><br>
+<input type="text" id="user" placeholder="Username" required />
+<h4 id='demo3'></h4>
 
 <label>EMAIL</label><br><br>
 <input type="text" id="email" name="email" placeholder="hello@example.com" required />
@@ -17,16 +20,14 @@
 
 
 <label>PASSWORD</label><br><br>
-<input type="password" id="pwd"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain 
-at least one number and one uppercase and lowercase letter,
- and at least 8 or more characters" required />
+<input type="password" id="pwd" required />
  <h4 id='demo2'></h4>
 
  
 <label>Confirm Password</label><br><br>
 <input type="password" id="pwd1" required /><br><br>
 
-<button class="btn btn-primary" type="submit"> SIGN UP </button>
+<input type="submit" value="SIGN UP" /> 
 
 <p id='demo'></p>
 
