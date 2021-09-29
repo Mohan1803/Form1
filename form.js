@@ -1,8 +1,8 @@
 function myFunc(){
-  const username = document.getElementById("1");
-  const email = document.getElementById("2");
-  const password = document.getElementById("3");
-  const password1 = document.getElementById("4"); 
+  const username = document.getElementById("user");
+  const email = document.getElementById("email");
+  const password = document.getElementById("pwd");
+  const password1 = document.getElementById("pwd1"); 
 
   //MAIL FORMAT
   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -29,15 +29,18 @@ function myFunc(){
       else if(!password.value.match(lowerCaseLetters) || !password.value.match(upperCaseLetters) ||
       !password.value.match(numbers) || !password.value.length >= 8)
       {  
-        document.getElementById('demo2').innerHTML="INSECURED PASSWORD!!!!";
+        alert("INSECURED PASSWORD!!!!")
+        //document.getElementById('demo2').innerHTML="INSECURED PASSWORD!!!!";
       }
        else if(!email.value.match(mailformat))
      { 
-       document.getElementById('demo1').innerHTML="You have entered an invalid email address!";
+       alert("You have entered an invalid email address!")
+      // document.getElementById('demo1').innerHTML="You have entered an invalid email address!";
      }
        else if(password.value!=password1.value)
      {
-       document.getElementById('demo').innerHTML="PASSWORD MISMATCH";
+       alert("PASSWORD MISMATCH")
+       //document.getElementById('demo').innerHTML="PASSWORD MISMATCH";
      }
        else
      {
