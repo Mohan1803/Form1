@@ -1,0 +1,43 @@
+<html>
+<body>
+  
+    <head>
+      <link rel="stylesheet" href="1.css">
+    </head>
+
+<div class="container">
+<form onsubmit="return myFunc()"><center><br><br><br><br>
+
+  <h2>Signup</h2>
+
+<label>USERNAME</label>&nbsp;&nbsp;&nbsp;<input type="text" id="1" required /><br><br>
+
+<label>EMAIL</label>&nbsp;&nbsp;&nbsp;<input type="text" id="2" name="email" required /><h4 id='demo1'></h4>
+
+
+<label>PASSWORD</label>&nbsp;&nbsp;&nbsp;
+<input type="password" id="3"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain 
+at least one number and one uppercase and lowercase letter,
+ and at least 8 or more characters" required />
+ <h4 id='demo2'></h4>
+
+ 
+<label>Confirm Password</label>&nbsp;&nbsp;&nbsp;<input type="password" id="4" required /><br><br>
+
+<input type="submit" value="signup" />
+
+<p id='demo'></p>
+
+</center>
+</form>
+</div>
+
+</div>
+
+
+
+<script src="form.js">
+</script>
+
+</body>
+</html>
