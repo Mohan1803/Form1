@@ -29,18 +29,16 @@ function myFunc(){
       else if(!password.value.match(lowerCaseLetters) || !password.value.match(upperCaseLetters) ||
       !password.value.match(numbers) || !password.value.length >= 8)
       {  
-        alert("INSECURED PASSWORD!!!!")
-        //document.getElementById('demo2').innerHTML="INSECURED PASSWORD!!!!";
+        
+        document.getElementById('demo2').innerHTML="INSECURED PASSWORD!!!!";
       }
        else if(!email.value.match(mailformat))
      { 
-       alert("You have entered an invalid email address!")
-      // document.getElementById('demo1').innerHTML="You have entered an invalid email address!";
+      document.getElementById('demo1').innerHTML="You have entered an invalid email address!";
      }
        else if(password.value!=password1.value)
      {
-       alert("PASSWORD MISMATCH")
-       //document.getElementById('demo').innerHTML="PASSWORD MISMATCH";
+       document.getElementById('demo').innerHTML="PASSWORD MISMATCH";
      }
        else
      {

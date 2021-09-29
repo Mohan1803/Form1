@@ -6,24 +6,27 @@
 <div class="container">
 <form onsubmit="return myFunc()"><center><br><br><br><br>
 
-  <h2>Signup</h2>
+  <h2>Sign up</h2>
 
-<label>USERNAME</label>&nbsp;&nbsp;&nbsp;<input type="text" id="user" required /><br><br>
+<label>USERNAME</label><br><br>
+<input type="text" id="user" placeholder="Username" required /><br><br>
 
-<label>EMAIL</label>&nbsp;&nbsp;&nbsp;<input type="text" id="email" name="email" required />
+<label>EMAIL</label><br><br>
+<input type="text" id="email" name="email" placeholder="hello@example.com" required />
 <h4 id='demo1'></h4>
 
 
-<label>PASSWORD</label>&nbsp;&nbsp;&nbsp;
+<label>PASSWORD</label><br><br>
 <input type="password" id="pwd"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain 
 at least one number and one uppercase and lowercase letter,
  and at least 8 or more characters" required />
  <h4 id='demo2'></h4>
 
  
-<label>Confirm Password</label>&nbsp;&nbsp;&nbsp;<input type="password" id="pwd1" required /><br><br>
+<label>Confirm Password</label><br><br>
+<input type="password" id="pwd1" required /><br><br>
 
-<input type="submit" value="signup" />
+<button class="btn btn-primary" type="submit"> SIGN UP </button>
 
 <p id='demo'></p>
 
