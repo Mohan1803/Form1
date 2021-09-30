@@ -24,15 +24,22 @@ function myFunc(){
    
        if (!username.value==0 || !email.value==0 || !password.value==0 || !password1.value==0)
        {
-        
+       /* if(!username.value.length<3 || !username.value.length>25)
+        {
+          document.getElementById('user').style.borderColor="#FF0000";
+          document.getElementById('demo3').innerHTML="Username must be between 3 to 25 characters"
+        }
+        else if(username.value.length<3 || username.value.length>25){
+          document.getElementById('user').style.borderColor="green";
+          document.getElementById('demo3').innerHTML="";
+        } */
        if(!password.value.match(lowerCaseLetters) || !password.value.match(upperCaseLetters) ||
-      !password.value.match(numbers) || !password.value.length >8)
+      !password.value.match(numbers) || !password.value.length >=8)
       {  
         document.getElementById('pwd').style.borderColor="#FF0000";
         document.getElementById('demo2').innerHTML="Password Must have atleast 8 characters that include atleast 1 lowercase , 1 uppercase , 1 number & 1 special character in(!@#$%^&*)";
       }
-      else if(password.value.match(lowerCaseLetters) || password.value.match(upperCaseLetters) ||
-        password.value.match(numbers) || password.value.length >= 8)
+      else 
       {
         document.getElementById('pwd').style.borderColor="green";
         document.getElementById('demo2').innerHTML="";
