@@ -1,14 +1,15 @@
 function myFunc(){
-  var result = "";
+  const result = "";
   result += validateUsername();
   result += validateEmail();
   result += validatePassword();
 
 
 
-  if(result=="")
+  if(result == "")
   {
     alert("SIGNUP SUCCESSFULL");
+    return true;
   }
   else{
     return false;
@@ -21,14 +22,13 @@ function myFunc(){
 
   if(username.length < 3){
     document.getElementById('user').style.borderColor="#FF0000";
-    document.getElementById('demo3').innerHTML="Username must be between 3 to 25 characters"
+    document.getElementById('demo3').innerHTML="Username must be between 3 to 25 characters";
   }
   else{
     document.getElementById('user').style.borderColor="green";
     document.getElementById('demo3').innerHTML="";
     return "";
   }
- 
 }
 
 
@@ -39,12 +39,12 @@ function validateEmail(){
   var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
   if(!email.match(mailformat)){
-    document.getElementById('pwd').style.borderColor="#FF0000";
-    document.getElementById('demo2').innerHTML="Password Must have atleast 8 characters that include atleast 1 lowercase , 1 uppercase , 1 number & 1 special character in(!@#$%^&*)";
+    document.getElementById('email').style.borderColor="#FF0000";
+    document.getElementById('demo1').innerHTML="Password Must have atleast 8 characters that include atleast 1 lowercase , 1 uppercase , 1 number & 1 special character in(!@#$%^&*)";
   }
   else{
-    document.getElementById('pwd').style.borderColor="green";
-    document.getElementById('demo2').innerHTML="";
+    document.getElementById('email').style.borderColor="green";
+    document.getElementById('demo1').innerHTML="";
     return "";
   }
   
@@ -56,7 +56,7 @@ function validateEmail(){
 function validatePassword(){
   const password = document.getElementById("pwd").value;
   const password1 = document.getElementById("pwd1").value;
-  const pwdformat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8}$/;
+  const pwdformat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,}$/;
 
   if(!password.match(pwdformat)){
     document.getElementById('pwd').style.borderColor="#FF0000";
@@ -80,9 +80,7 @@ function validatePassword(){
    return "";
 }
 }
-
 }
-
   
 
  
