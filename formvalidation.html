@@ -4,7 +4,6 @@
  <head>
     <meta charset="UTF-8">
     <script src="form.js"></script>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Form Validation</title>
 </head>
@@ -17,26 +16,26 @@
       <div class="row align-items-center"></div>
       <div class="col-md-20 offset-md-1">
 
-<form onsubmit="return myFunc()" method="POST">
+<form name="myForm" onsubmit="myFunc(event)" method="POST">
 
   <b><h1>SIGN UP</h1></b><br>
 
 <label>USERNAME</label><br>
-<input type="text" id="user" placeholder="Username" required />
+<input type="text" id="user" placeholder="Username" />
 <h6 id='demo3'></h6>
 
 <label>EMAIL</label><br>
-<input type="text" id="email" name="Email" placeholder="hello@example.com" required />
+<input type="text" id="email" name="Email" placeholder="hello@example.com"  />
 <h6 id='demo1'></h6>
 
 
 <label>PASSWORD</label><br>
-<input type="password" id="pwd" placeholder="Password" required />
+<input type="password" id="pwd" placeholder="Password"  />
 <h6 id='demo2'></h6>
 
  
 <label>CONFIRM PASSWORD</label><br>
-<input type="password" id="pwd1" placeholder="Re-Type Password" required /><h6 id='demo'></h6><br><br>
+<input type="password" id="pwd1" placeholder="Re-Type Password"  /><h6 id='demo'></h6><br><br>
 
 <input type="submit"  value="SIGN UP" /> <br><br>
 
@@ -45,5 +44,6 @@
 
 </form>
 </div></div></div>
+<link rel="stylesheet" href="style.css">
 </body>
 </html>

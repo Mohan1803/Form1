@@ -1,19 +1,13 @@
-function myFunc(){
-  const result = "";
-  result += validateUsername();
-  result += validateEmail();
-  result += validatePassword();
+function myFunc(e){
+  e.preventDefault();
+  
+   validateUsername();
+   validateEmail();
+   validatePassword();
 
 
 
-  if(result == "")
-  {
-    alert("SIGNUP SUCCESSFULL");
-   return true;
-  }
-  else{
-    return false;
-  }
+
 
 //validating username
 
@@ -27,7 +21,7 @@ function myFunc(){
   else{
     document.getElementById('user').style.borderColor="green";
     document.getElementById('demo3').innerHTML="";
-    return "";
+    
   }
 }
 
@@ -35,9 +29,9 @@ function myFunc(){
 //validating email
 
 function validateEmail(){
-  const email = document.getElementById("email");
-  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
+  const email = document.getElementById("email").value;
+  var mailformat = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+ 
   if(!email.match(mailformat)){
     document.getElementById('email').style.borderColor="#FF0000";
     document.getElementById('demo1').innerHTML="Password Must have atleast 8 characters that include atleast 1 lowercase , 1 uppercase , 1 number & 1 special character in(!@#$%^&*)";
@@ -45,7 +39,7 @@ function validateEmail(){
   else{
     document.getElementById('email').style.borderColor="green";
     document.getElementById('demo1').innerHTML="";
-    return "";
+    ;
   }
   
 }
@@ -65,7 +59,7 @@ function validatePassword(){
  else{
   document.getElementById('pwd').style.borderColor="green";
   document.getElementById('demo2').innerHTML="";
-  return "";
+  ;
  }
 
  if(password != password1)
@@ -77,9 +71,12 @@ function validatePassword(){
  {
   document.getElementById('pwd1').style.borderColor="green";
    document.getElementById('demo').innerHTML="";
-   return "";
+  
 }
 }
+
+
+
 }
   
 
