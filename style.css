@@ -3,6 +3,10 @@ h6{
   font-family: 'Times New Roman';
 }
 
+h1{
+  font-family: 'Times New Roman';
+}
+
 
 form{
   
@@ -49,4 +53,5 @@ input[type=password], select {
 
   label{
       padding-left: 10px;
+      font-family: 'Times New Roman';
   }

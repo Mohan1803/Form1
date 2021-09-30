@@ -9,7 +9,7 @@ function myFunc(){
   if(result == "")
   {
     alert("SIGNUP SUCCESSFULL");
-    return true;
+   return true;
   }
   else{
     return false;
